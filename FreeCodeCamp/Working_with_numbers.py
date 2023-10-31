@@ -1,0 +1,20 @@
+from math import *
+print(3 ** 4.5)
+my_num = 5
+print(str(my_num) + " is your age")
+print("abs() Function")
+my_num = -79.95
+print(abs(my_num))
+print(str(abs(my_num)) + " is your age")
+print("pow() Function")
+print(7 ** 6)
+print(pow(7, 6))
+print("Max and Min")
+print(max(74, 2099))
+print(min(74, 2099))
+print("round() Function")
+print(round(7.6))
+print("More functions")
+print(floor(13.7))
+print(ceil(21.2))
+print(sqrt(36))

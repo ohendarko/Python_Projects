@@ -1,0 +1,113 @@
+def mult_by_2(num):
+    return num * 2
+
+times_two = mult_by_2
+
+print("4 * 2 =", times_two(4))
+def do_math(func, num):
+    return func(num)
+
+print ("8 * 2=", do_math(mult_by_2, 8))
+
+def get_func_mult_by_num(num):
+
+    def mult_by(value):
+        return num * value
+
+    return mult_by
+
+generated_func = get_func_mult_by_num(5)
+
+print("5 * 10 = ", generated_func(10))
+
+
+listOfFuncs = [times_two, generated_func]
+
+print("5 * 9 = ", listOfFuncs[1](9))
+
+================================================================
+################################################################
+
+def random_func(name: str, age: int, weight: float) -> str:
+    print("Name :", name)
+    print("Age :", age)
+    print("Weight :", weight)
+
+    return "{} is {} years old and weighs {}".format(name, age, weight)
+
+print(random_func("Derek", 41, 165.5))
+print(random_func(89, "Derek", "Turtle"))
+print(random_func.__annotations__)
+
+=================================================================
+#################################################################
+
+sum = lambda x, y: x + y
+
+print("Sum :", sum(4, 5))
+
+can_vote = lambda age: True if age >= 18 else False
+
+print ("Can Vote:", can_vote(16))
+
+powerList = [lambda x: x ** 2,
+             lambda x: x ** 3,
+             lambda x: x ** 4]
+
+for func in powerList:
+    print(func(4))
+
+=================================================================
+#################################################################
+
+
+attack = {'quick': (lambda: print("Quick Attack")),
+          'power': (lambda: print("Power Attack")),
+          'miss': (lambda: print("Missed Attack"))}
+
+attack['quick']()
+
+import random
+
+attackKey = random.choice(list(attack.keys()))
+
+attack[attackKey]()
+
+
+=================================================================
+#################################################################
+
+
+import random
+toss = ['H', 'T']
+outcomes =[]
+times = 0
+for i in toss:
+    while times < 100:
+        s = random.choice(toss)
+        outcomes.append(s)
+        times += 1
+# print(outcomes)
+print("Heads :", outcomes.count('H'))
+print("Tails :", outcomes.count('T'))
+
+
+=================================================================
+#################################################################
+
+
+oneTo10 = range(1, 11)
+
+def dbl_num(num):
+    return num * 2
+print(list(map(dbl_num, oneTo10)))
+
+print(list(map((lambda x: x * 3), oneTo10)))
+
+aList = list(map((lambda x, y: x + y), [1, 2, 3], [1, 2, 3]))
+
+print(aList)
+
+
+=================================================================
+#################################################################
