@@ -4,7 +4,7 @@ If name is not part of the birthdays DICTIONARY,
 you can add to it.
 Requires basic knowledge in:
 1. Flow control; if, while, else loops
-2. Dictionaries
+2. Dictionaries data structure
 3. Functions
 4. Print formatting"""
 
@@ -35,8 +35,11 @@ def main():
     response = input("Y/n: ")
     if response == 'Y':
         birthday()
-    else:
+    elif response == 'n':
         exit(code=1)
-
+    else:
+        print("Command {} not recognized".format(response))
+    for k, v in birthdays.items():
+        print("{}:{}".format(k, v))
 
 main()
