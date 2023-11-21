@@ -6,7 +6,9 @@ Requires basic knowledge in:
 1. Flow control; if, while, else loops
 2. Dictionaries data structure
 3. Functions
-4. Print formatting"""
+4. Print formatting
+Adapted from AUTOMATE THE BORING STUFF WITH PYTHON by Al Sweigart,
+page 106, 107"""
 
 
 # birthday dictionary
