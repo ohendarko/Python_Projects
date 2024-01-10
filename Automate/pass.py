@@ -81,11 +81,11 @@ def load_passwords(filename='passwords.json'):
 PASSWORDS = load_passwords()
 
 while True:
-    if len(sys.argv) < 2:
-        print('Usage: pass.py [account]')
-        sys.exit()
-
-    account = sys.argv[1]
+    print('''Welcome to password manager.
+Please take note!
+All accounts are saved and will be saved in lowercase.''')
+    print()
+    account = input("What account are you interested in?: ").strip().lower()
 
     if account in PASSWORDS:
         pyperclip.copy(PASSWORDS[account])
