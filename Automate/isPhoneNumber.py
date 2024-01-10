@@ -97,4 +97,6 @@ subbed = namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Ag
 print(subbed)
 print(namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.'))
 
-print('='*30)
+print('*'*20)
+agentNamesRegex = re.compile(r'Agent (\w)\w*')
+print(agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.'))
