@@ -81,9 +81,9 @@ def load_passwords(filename='passwords.json'):
 PASSWORDS = load_passwords()
 
 while True:
-    print('''Welcome to password manager.
-Please take note!
-All accounts are saved and will be saved in lowercase.''')
+    print(''' Welcome to password manager.
+ Please take note!
+ All accounts are saved and will be saved in lowercase.''')
     print()
     account = input("What account are you interested in?: ").strip().lower()
 
@@ -92,10 +92,13 @@ All accounts are saved and will be saved in lowercase.''')
         print('Password for {} copied to clipboard.'.format(account))
         print('Exiting program.')
         break
+    elif not account or len(account) < 2:
+        print('Account must be at least 2 letters!')
     else:
         print(f"There is no account named {account}")
         print(f"Would you like to add/update a password for {account}?")
         answer = input("Y/n: ").strip()
+
 
         if answer == 'Y':
             while True:
