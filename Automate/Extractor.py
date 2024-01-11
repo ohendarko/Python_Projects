@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+"""This program is intended to
+extract phone numbers and email addresses"""
 # phoneAndEmail.py - Finds phone numbers and email addresses on the clipboard.
 import pyperclip, re
 phoneRegex = re.compile(r'''(
